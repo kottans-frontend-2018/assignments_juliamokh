@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task 11 Kottans - Checkout Form</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/fonts.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">  
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="logo">
+            <img src="img/logo_header.png" alt="">
+        </div>
+        <div class="btn btn-back">
+            <a href="#"><i class="fas fa-long-arrow-alt-left"></i>Go back</a>
+        </div>
+        <div class="btn btn-sign-in">
+            <a href=""><i class="fas fa-user"></i>Sign in</a>
+        </div>  
+    </header>
+    
+    <main class="page-main"> 
+        <form action="#" method="post" class="form"> 
+            <section class="order-header">
+                <div class="order-summary">
+                    <table>
+                        <caption><i class="fas fa-clipboard"></i>Your order</caption>
+                        <tr>
+                            <th>Items</th>
+                            <th>Details</th>
+                            <th>Price</th>
+                            <th>Delivery</th>
+                        </tr>
+                        <tr>
+                            <td>2 documents</td>
+                            <td>2 languages</td>
+                            <td>$ 696.06</td>
+                            <td>48 hours*</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btn-wrapper">
+                    <button class="btn order-btn" type="submit">Place order</button>
+                    <button class="btn print-btn" type="button">Print a quote</button>
+                </div>
+                <div class="help">
+                    <h3><i class="far fa-life-ring"></i>Help center</h3>
+                    <p>If you need assistance while placing your
+                        order, contact one of our beloved Project
+                        Manager by phone or email</p>
+                    <address>
+                        <a href="tel:+971(0)555555">+971(0)555 555</a>
+                        <a href="mailto:help@qtest.com">help@qtest.com</a>
+                    </address>
+                </div>
+            </section>
+                 
+            <section class="document-type-select">
+                <h2><span>Select what you want to translate</span></h2>
+                <div class="radio-row">
+                    <label class="document-type-radio">
+                        <input type="radio" name="document-type" value="website" required>
+                        <span class="select-wrapper">
+                            Website
+                            <img src="img/website.png" alt="">
+                        </span>
+                    </label>
+                    <label class="document-type-radio">
+                        <input type="radio" name="document-type" value="document" required checked>
+                        <span class="select-wrapper">
+                            Documents
+                            <img src="img/document.png" alt="">
+                        </span>
+                    </label>
+                    <label class="document-type-radio">
+                        <input type="radio" name="document-type" value="social" required>
+                        <span class="select-wrapper">
+                            Social Account
+                            <img src="img/social.png" alt="">
+                        </span>
+                    </label>
+                </div>
+            </section>
+            
+            <section class="file-upload counter">
+                <h2>Upload your documents <span>(Doc, Docx, Text, PFD, Markdown)</span></h2>
+                <label class="file-upload-btn">
+                    <input type="file" name="file" accept=".doc, .docx, .txt, .pdf, .md" multiple required hidden>
+                    <span class="select-wrapper">
+                        <span><i class="fas fa-cloud-upload-alt"></i>Upload a new file</span>
+                    </span>
+                </label>
+                <div class="file-upload-table">
+                    <table>
+                        <tr>
+                            <th>File name</th>
+                            <th>File size</th>
+                            <th>Number of words</th>
+                            <th>Remove</th>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-file-alt"></i>busines_operations.docx</td>
+                            <td>78kb</td>
+                            <td>842</td>
+                            <td><i class="fas fa-trash"></i></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-file-alt"></i>busines_financial.docx</td>
+                            <td>26kb</td>
+                            <td>2,326</td>
+                            <td><i class="fas fa-trash"></i></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            
+            <section class="language-select counter">
+                <h2>Choose your languages pairings</h2>
+                <div class="src-language-select">
+                    <label for="src-language">
+                        <span>From</span>
+                    </label>
+                    <select id="src-language" name="src-language">
+                        <option value="arabic">Arabic</option>
+                        <option value="english" selected>English</option>
+                        <option value="kurdish">Kurdish</option>
+                        <option value="ukrainian">Ukrainian</option>
+                    </select>
+                </div>
+                <div class="res-language-select">
+                    <label for="res-language-1">
+                        <span>To</span>
+                    </label>
+                    <select id="res-language-1" name="res-language-1">
+                        <option value="arabic" selected>Arabic</option>
+                        <option value="english">English</option>
+                        <option value="kurdish">Kurdish</option>
+                        <option value="ukrainian">Ukrainian</option>
+                    </select>
+                    <select id="res-language-2" name="res-language-2">
+                        <option value="arabic">Arabic</option>
+                        <option value="english">English</option>
+                        <option value="kurdish" selected>Kurdish</option>
+                        <option value="ukrainian">Ukrainian</option>
+                    </select>
+                    <i class="fas fa-trash"></i>
+                    <button class="btn" type="button"><i class="fas fa-plus"></i>Add</button>
+                </div>
+            </section>
+            
+            <div class="two-sections-container">
+                <section class="tone-select counter">
+                    <h2>Select your desired tone</h2>
+                    <div class="container">
+                        <label class="tone-radio">
+                            <input type="radio" name="tone" value="casual" required>
+                            <span class="select-wrapper">
+                                <span><i class="fas fa-comments"></i>Friendly / Casual</span>
+                            </span>
+                        </label>
+                        <label class="tone-radio">
+                            <input type="radio" name="tone" value="pro" required checked>
+                            <span class="select-wrapper">
+                                <span><i class="fas fa-briefcase"></i>Corporate / Pro</span>
+                            </span>
+                        </label>
+                        <label class="tone-radio">
+                            <input type="radio" name="tone" value="formal" required>
+                            <span class="select-wrapper">
+                                <span><i class="fas fa-bullhorn"></i>Media / Formal</span>
+                            </span>
+                        </label>
+                    </div>
+                </section>
+                
+                <section class="time-select counter">
+                    <h2>Tell us how urgent this job is</h2>
+                    <input type="range" min="0" max="100" step="1" value="50">
+                    <ul class="range-labels">
+                        <li>I got time</li>
+                        <li class="selected">Average</li>
+                        <li>Yesterday</li>
+                    </ul>
+                    <div class="timeline-info">
+                        <h4><i class="fas fa-info-circle"></i>Timeline info</h4>
+                        <p>With an <strong>average</strong> timeline set up, our expert translator can take a
+                            reasonable amount of time perfecting your translation</p>
+                    </div>
+                </section>
+            </div>
+            
+            <section class="payment-select counter">
+                <h2>Sign up and choose a payment method</h2>
+                <p>Already have an account with us? <a href="#">Sign in</a>.</p>
+                <div class="container personal">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="name" value="Mathieu Mayer" required>
+                </div>
+                <div class="wrapper">
+                    <div class="container personal">
+                        <label for="email">Email adress</label>
+                        <input type="email" id="email" name="email" value="mathieu.mm@me.com" required>
+                    </div>
+                    <div class="container personal">
+                        <label for="pwd">Choose a password</label>
+                        <input type="password" id="pwd" name="pwd" minlength="8" value="123456789" required>
+                    </div>
+                </div>
+                <div class="payment-radio-wrapper">
+                    <label class="payment-method-radio">
+                        <input type="radio" name="payment-method" value="credit-card" required checked>
+                        <span class="select-wrapper">
+                            <img src="img/credit_card.png" alt="Visa / MasterCard">
+                        </span>
+                    </label>
+                    <label class="payment-method-radio">
+                        <input type="radio" name="payment-method" value="paypal" required>
+                        <span class="select-wrapper">
+                            <img src="img/paypal.png" alt="PayPal">
+                        </span>
+                    </label>
+                    <label class="payment-method-radio">
+                        <input type="radio" name="payment-method" value="amazon" required>
+                        <span class="select-wrapper">
+                            <img src="img/amazon.png" alt="amazon.com">
+                        </span>
+                    </label>
+                </div>
+                <div class="wrapper">
+                    <div class="container">
+                        <label for="card-number">Card number</label>
+                        <input type="text" id="card-number" name="card-number" minlength="16" maxlength="16" required>
+                    </div>
+                    <div class="container">
+                        <label for="card-expiry-date">Expiry date</label>
+                        <input type="text" id="card-expiry-date" name="card-expiry-date" placeholder="DD/MM/YY"
+                            minlength="8" maxlength="8" required>
+                    </div>
+                    <div class="container">
+                        <label for="verification">Code</label>
+                        <input type="password" id="verification" name="verification-code" minlength="3" maxlength="3" required>
+                    </div>
+                </div>
+            </section>
+           
+            <section class="order-footer">
+                <input type="checkbox" id="agreement-terms" name="agreement-terms" value="true" required>
+                <label for="agreement-terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                <button class="btn order-btn" type="submit">Place order</button>
+                <button class="btn print-btn" type="button">Print a quote</button>
+            </section>
+        </form>
+    </main>
+   
+    <footer class="page-footer">
+        <div class="footer-wrapper">
+            <div class="about">
+                <h3><i class="far fa-heart"></i>What we do</h3>
+                <p><i>We provide full range of language
+                    services including content development,
+                    document, website and social media
+                    accounts translations.</i></p>
+            </div>
+            <div class="main-office-address">
+                <h3><i class="far fa-compass"></i>Our main office</h3>
+                <address>
+                    <p>Dubai, UAE<br>
+                    P.O.Box: 502735<br>
+                    Phone: <a href="tel:+971(0)44278128">+971(0)44278128</a>
+                    </p>
+                </address>
+            </div>
+            <div class="social">
+                <h3><i class="fas fa-share-alt"></i>Connect with us</h3>
+                <ul>
+                    <li><i class="fab fa-facebook-square"></i>Facebook</li>
+                    <li><i class="fab fa-twitter-square"></i>Twitter</li>
+                    <li><i class="fab fa-linkedin"></i>Linkedin</li>
+                </ul>
+            </div>
+            <div class="logo">
+                <img src="img/logo_footer.png" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
