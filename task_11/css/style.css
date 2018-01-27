@@ -76,6 +76,16 @@ i.fab  {
     background-color: #f7f7fa;
 } 
 
+button.trash {
+    border: none;
+    color: #a5abc5;
+    font-size: 14px
+}
+
+button.trash:hover {
+    cursor: pointer;
+}
+
 
 /* custom radio buttons */
 
@@ -93,7 +103,11 @@ input[type="radio"] {
     border-radius: 3px;
     font-size: 14px;
     color: #9098b8;
-}   
+} 
+
+.select-wrapper:hover {
+    cursor: pointer;
+}
 
 input[type="radio"]:checked + .select-wrapper {
 	border: 3px solid #76a7e1;
@@ -356,6 +370,11 @@ input[type="range"]::after {
     justify-content: space-between;
 }
 
+.document-type-select .document-type-radio {
+    border: 1px solid #c9d0e1;
+    border-radius: 3px;
+}
+
 .document-type-select .select-wrapper {
     width: 290px;
     height: 200px;
@@ -363,6 +382,7 @@ input[type="range"]::after {
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
+    border: 3px solid transparent;
 }
 
 .document-type-select .select-wrapper img {
@@ -444,11 +464,15 @@ input[type="range"]::after {
     margin: 0 10px;
     position: relative;
     color: #a5abc5;
-    background-color: #f7f7fa;
+    background: #f7f7fa;
     border: 1px solid #c9d0e1;
     border-radius: 2px;
     font-size: 14px;
-    text-align-last: center; 
+    text-align-last: center;
+}
+
+.language-select select:hover {
+    cursor: pointer;
 }
 
 .language-select label span{
@@ -671,6 +695,10 @@ input[type="range"]::after {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+.order-footer input[type="checkbox"]:hover {
+    cursor: pointer;
 }
 
 .order-footer .btn {
