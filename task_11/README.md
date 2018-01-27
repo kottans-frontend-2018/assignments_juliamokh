@@ -1,7 +1,7 @@
 # Сheckout Form
 ## 11 task for kottans frontend course
 
-Link to demo: [GitHub Pages Demo](https://juliamokh.github.io/checkout-form/)
+Link to demo: [GitHub Pages Demo](https://juliamokh.github.io/assignments_juliamokh/task_11/)
 
 
 #### Task Description
