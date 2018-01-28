@@ -366,7 +366,6 @@ input[type="range"]::after {
 .document-type-select .radio-row {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
