@@ -79,7 +79,8 @@ i.fab  {
 button.trash {
     border: none;
     color: #a5abc5;
-    font-size: 14px
+    font-size: 14px;
+    background-color: transparent;
 }
 
 button.trash:hover {
@@ -463,11 +464,12 @@ input[type="range"]::after {
     margin: 0 10px;
     position: relative;
     color: #a5abc5;
-    background: #f7f7fa;
+    background-color: #f7f7fa;
     border: 1px solid #c9d0e1;
     border-radius: 2px;
     font-size: 14px;
     text-align-last: center;
+    -webkit-appearance: none;
 }
 
 .language-select select:hover {
