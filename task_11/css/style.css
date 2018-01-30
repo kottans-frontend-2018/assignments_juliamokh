@@ -7,6 +7,7 @@
 }
 
 body {
+    min-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,13 +50,15 @@ i.fab  {
     letter-spacing: 1px;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus{
     color: #76a7e1;
     border: 2px solid #76a7e1;
     cursor: pointer;
 }
 
-.btn:hover a {
+.btn:hover a,
+.btn:focus a  {
     color: #76a7e1;
 }
 
@@ -65,7 +68,8 @@ i.fab  {
     border-color: #54aca9;
 } 
 
-.order-btn:hover {
+.order-btn:hover,
+.order-btn:focus {
     color: #76a7e1;
     background-color: #fff;
     border: 2px solid #76a7e1;
@@ -83,7 +87,8 @@ button.trash {
     background-color: transparent;
 }
 
-button.trash:hover {
+button.trash:hover,
+button.trash:focus {
     cursor: pointer;
     color: #76a7e1;
 }
@@ -92,7 +97,8 @@ button.trash:hover {
 /* custom radio buttons */
 
 input[type="radio"] {
-    display: none;
+    opacity: 0;
+	position: absolute;
 }
 
 .select-wrapper {
@@ -119,14 +125,14 @@ input[type="radio"]:checked + .select-wrapper {
 
 input[type="radio"]:checked + .select-wrapper::after {
 	font-family: "Font Awesome\ 5 Free";
-	content: "\f058";
+    content: "\f058";
 	position: absolute;
 	top: -10px;
     right: -10px;
     z-index: 2;
 	color: #76a7e1;
     background-color: #fff;
-    border-radius: 100%;
+    border-radius: 24px;
     font-size: 24px;
 }
 
@@ -135,7 +141,7 @@ input[type="radio"]:checked + .select-wrapper::after {
 
 input[type="range"] {
     -webkit-appearance: none;
-    width: 85%;
+    width: 425px;
     margin: 6px auto;
     position: relative;
   }
@@ -145,7 +151,7 @@ input[type="range"]:focus {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-    width: 85%;
+    width: 425px;
     height: 10px;
     cursor: pointer;
     background: #eff0f5;
@@ -217,8 +223,7 @@ input[type="range"]::after {
 /* HEADER */
 
 .page-header {
-    width: 80%;
-    max-width: 1200px;
+    width: 1150px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -239,8 +244,7 @@ input[type="range"]::after {
 /* MAIN */
 
 .page-main {
-    width: 80%;
-    max-width: 1200px;
+    width: 1150px;
     background-color: #fff;
     border: 1px solid #c9d0e1;
     border-radius: 3px;
@@ -416,6 +420,11 @@ input[type="range"]::after {
     font-size: 12px;
 }
 
+.file-upload input[type="file"] {
+    opacity: 0;
+	position: absolute;
+}
+
 .file-upload .select-wrapper {
     width: 230px;
     height: 50px;
@@ -468,13 +477,13 @@ input[type="range"]::after {
     position: relative;
 }
 
-.language-select .language-container .select-arrow {
+.language-select .language-container .fa-caret-down {
 	position: absolute;
-	top: 12px;
+	top: 13px;
     right: 10px;
-    z-index: 2;
     font-size: 24px;
     cursor: pointer;
+    opacity: 90%;
 }
 
 .language-select select {
@@ -685,6 +694,42 @@ input[type="range"]::after {
     width: 300px;
 }
 
+.payment-select .personal {
+    position: relative;
+}
+
+.payment-select .personal input[type="text"]:valid ~ .fa-check-circle,
+.payment-select .personal input[type="email"]:valid ~ .fa-check-circle,
+.payment-select .personal input[type="password"]:valid ~ .fa-check-circle {
+    position: absolute;
+    top: 38px;
+    left: 270px;
+    color: #76a7e1;
+    font-size: 20px;
+}
+
+.payment-select .personal input[type="text"]:valid ~ .fa-times-circle,
+.payment-select .personal input[type="email"]:valid ~ .fa-times-circle,
+.payment-select .personal input[type="password"]:valid ~ .fa-times-circle {
+    display: none;
+}
+
+.payment-select .personal input[type="text"]:invalid ~ .fa-times-circle,
+.payment-select .personal input[type="email"]:invalid ~ .fa-times-circle,
+.payment-select .personal input[type="password"]:invalid ~ .fa-times-circle {
+    position: absolute;
+    top: 38px;
+    left: 270px;
+    color: #e17776;
+    font-size: 20px;
+}
+
+.payment-select .personal input[type="text"]:invalid ~ .fa-check-circle,
+.payment-select .personal input[type="email"]:invalid ~ .fa-check-circle,
+.payment-select .personal input[type="password"]:invalid ~ .fa-check-circle {
+    display: none;
+}
+
 .payment-select .payment-method-radio .select-wrapper {
     width: 220px;
     height: 100px;
@@ -693,6 +738,7 @@ input[type="range"]::after {
 
 .payment-select input[name="card-number"] {
     width: 380px;
+    background: url(../img/visa.png) no-repeat 95% 50%;
 }
 
 .payment-select input[name="card-expiry-date"] {
@@ -750,7 +796,7 @@ input[type="range"]::after {
 }
 
 .page-footer .footer-wrapper {
-    width: 80%;
+    width: 1150px;
     max-width: 1200px;
     display: flex;
     flex-direction: row;
@@ -812,6 +858,10 @@ input[type="range"]::after {
 
 .page-footer .social ul i {
     padding-right: 20px;
+}
+
+.page-footer .social a:hover {
+    text-decoration: underline;
 }
 
 .page-footer .logo {
