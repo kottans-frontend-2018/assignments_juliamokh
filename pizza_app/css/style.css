@@ -91,6 +91,21 @@ html {
     font-size: 14px;
     font-weight: bold; 
     text-transform: uppercase;
+    box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+    background: #f5cb5c;
+    box-shadow: -2px 2px 16px rgba(0, 0, 0, 0.8);
+    outline: none;
+}
+
+.btn:active {
+    background: #e8dcb9;
+    box-shadow: -4px 4px 24px rgba(0, 0, 0, 0.8);
+    outline: none;
 }
 
 .btn-wrapper {
@@ -131,7 +146,7 @@ html {
 /* QUEUE */
 
 .queue {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -147,6 +162,7 @@ html {
     background: #1f2230;
     border: 2px solid #f2b632;
     border-radius: 5px;
+    box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 .order img {
@@ -197,6 +213,7 @@ html {
 
     .page-footer {
         flex-direction: row;
+        padding: 20px;
     }
 
     .page-footer .copyright {
@@ -229,6 +246,6 @@ html {
     }
 
     .page-main {
-        margin-top: 100px;
+        margin-top: 110px;
     }
 }
